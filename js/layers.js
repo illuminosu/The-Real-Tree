@@ -3702,7 +3702,7 @@ addLayer("o", {
 			},
 			13: {
 				title: "Convectional Energy",
-				gain() { return player.o.points.div(1e3).times(player.o.energy.div(2e5)).times(player.ss.subspace.div(10)).root(6.5).pow(tmp.o.buyableGainExp).floor() },
+				gain() { return player.o.points.div(1e3).times(player.o.energy.div(2e50)).times(player.ss.subspace.div(9e500)).root(6.5).pow(tmp.o.buyableGainExp).floor() },
 				effect() { return player[this.layer].buyables[this.id].times(tmp.o.multiplyBuyables).plus(1).pow(tmp.o.solPow).log10().plus(1).pow(2.5).pow(((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes(this.layer):false)?27.5:1) },
 				display() { // Everything else displayed in the buyable button after the title
                     let data = tmp[this.layer].buyables[this.id]
